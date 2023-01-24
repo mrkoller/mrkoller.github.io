@@ -22,7 +22,7 @@ title: Matt's Site
 email: matt@mrkoller.com.com
 description: >- # this means to ignore newlines until "baseurl:"
   Just a site to store some posts I have written for topics that come up being a Security Engineer.
-baseurl: "/blog" # the subpath of your site, e.g. /blog
+# baseurl: "/blog" # the subpath of your site, e.g. /blog
 url: "https://mrkoller.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: mr_koller
 github_username:  mrkoller
