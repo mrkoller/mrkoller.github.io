@@ -27,9 +27,6 @@ url: "https://mrkoller.github.io" # the base hostname & protocol for your site, 
 twitter_username: mr_koller
 github_username:  mrkoller
 
-permalink: /:collection/:year-:month-:day-:title:output_ext
-show_excerpts: true
-
 # Build settings
 theme: minima
 plugins:
