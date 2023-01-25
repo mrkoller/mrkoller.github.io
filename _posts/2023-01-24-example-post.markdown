@@ -3,6 +3,7 @@ layout: post
 title: "Example Post"
 date: 2023-01-24
 categories: jekyll blogging
+featured_image: IMG_1143.png
 ---
 
 The goal of this article is to add some extra info
