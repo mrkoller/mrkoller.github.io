@@ -22,7 +22,7 @@ title: Security Things
 email: kollersecurity@outlook.com
 footerheading: Contact
 description: >- # this means to ignore newlines until "baseurl:"
-  The thoughts, views, and opinions are solely my own and do reflect the opinions of past, present, or future employers.
+#  The thoughts, views, and opinions are solely my own and do reflect the opinions of past, present, or future employers.
 # baseurl: "/blog" # the subpath of your site, e.g. /blog
 url: "https://mrkoller.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: mr_koller
