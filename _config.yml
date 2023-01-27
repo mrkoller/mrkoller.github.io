@@ -34,6 +34,11 @@ theme: minima
 plugins:
 #  - jekyll-feed
 
+# reCaptcha
+reCaptcha:
+    siteKey: 6LfI7i0kAAAAANBJddIWow9VCWO3u9lZce5K32T2
+    secret: 6LfI7i0kAAAAADG7RRfa-2zxhLdvrCO_pbz0CKHb
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

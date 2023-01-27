@@ -8,7 +8,8 @@
   <div class="comment-bottom">
     <input class="comment-name" name="fields[name]" type="text" placeholder="Name" required>
     <button class="comment-submit" type="submit">SEND</button>
-  </div>  
+  </div>
+  <div id="reCaptcha" class="g-recaptcha" data-sitekey="{{ site.reCaptcha.siteKey }}"></div>
 </form>
 
 <script>

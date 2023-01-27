@@ -34,6 +34,12 @@ comments:
       options:
         format: "timestamp-seconds"
 
+  # reCaptcha
+  reCaptcha:
+    enabled: true
+    siteKey: 6LfI7i0kAAAAANBJddIWow9VCWO3u9lZce5K32T2
+    secret: Uu47/ExSWXX+tdvw8rczEJjSqjq7YLtPHUDh3CYKLbXpCDke6AbZd7jhLUfpmMI4hY4IYxu3KOeWXrrmqS8Mp6yvia8SYhWpGh0421h/TXeWJiJp+qdu/qSH9cRf4YYPwOaN3g6hBhXY0oU+ddre3sOc6Wt+Y0OguAyk8GZaJrX74PSplXr/XByBvNIhBfIxEwiuSEgGm0dpgXe0Izvh1Cbj32YQgCd86+Urisqz6Ps0uzs9a+LEfu1aCj993GkBhZGBjns0+PCXT8LpwC7ivINzCJbapnvY4W4wv+I4UbN8WDxJ6tzJNZa//tdgmJYdBFJEoHKIDz7y2AwXkK6HAA==
+
   # Whether entries need to be approved before they are published to the main
   # branch. If set to `true`, a pull request will be created for your approval.
   # Otherwise, entries will be published to the main branch automatically.
