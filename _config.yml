@@ -27,17 +27,12 @@ description: >- # this means to ignore newlines until "baseurl:"
 url: "https://mrkoller.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: mr_koller
 github_username:  mrkoller
-staticman_url: https://site-comments.herokuapp.com/v3/entry/github/mrkoller/mrkoller.github.io/main/comments
+# staticman_url: https://site-comments.herokuapp.com/v3/entry/github/mrkoller/mrkoller.github.io/main/comments
 
 # Build settings
 theme: minima
 plugins:
 #  - jekyll-feed
-
-# reCaptcha
-reCaptcha:
-    siteKey: 6LfI7i0kAAAAANBJddIWow9VCWO3u9lZce5K32T2
-    secret: 6LfI7i0kAAAAADG7RRfa-2zxhLdvrCO_pbz0CKHb
 
 # Exclude from processing.
 # The following items will not be processed, by default.
