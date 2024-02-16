@@ -1,7 +1,17 @@
 ---
 ---
 
-@import "minima/skins/dark"; // Import Minima's dark theme styles
+@import "minima";
+
+// Define your dark theme styles
+body {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+a {
+  color: #4a86e8; // Example link color
+}
 
 // Add your custom styles here
 body {
