@@ -1,19 +1,36 @@
 ---
+# Only the main Sass file needs front matter (the dashes are enough)
 ---
 
+// Import the default styles from the Minima theme
 @import "minima";
 
-// Define your dark theme styles
+// Define dark theme colors
+$background-color: #121212; // Dark gray
+$text-color: #E0E0E0; // Light gray for text
+$link-color: #BB86FC; // Light purple for links
+$link-hover-color: #3700B3; // Darker purple for link hover
+
+// Apply dark theme colors
 body {
-  background-color: #121212;
-  color: #ffffff;
+  background-color: $background-color;
+  color: $text-color;
 }
 
 a {
-  color: #4a86e8; // Example link color
+  color: $link-color;
+  &:hover {
+    color: $link-hover-color;
+  }
 }
 
-// Add your custom styles here
-body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+header {
+  background-color: darken($background-color, 5%);
 }
+
+footer {
+  background-color: darken($background-color, 10%);
+  color: lighten($text-color, 10%);
+}
+
+// Add custom styles for other elements as needed
