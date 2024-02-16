@@ -1,0 +1,21 @@
+name: Jekyll site CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.0'
+    - name: Build and deploy
+      uses: helaili/jekyll-action@2.0.5
+      env:
+        JEKYLL_PAT: ${{ secrets.GITHUB_TOKEN }}
