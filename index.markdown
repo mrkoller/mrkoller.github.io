@@ -8,7 +8,6 @@ title: ''
 ---
 
 
-Welcome to this blog!
+Welcome!
 
-This is just a collection of things I learned or have created 
-while doing my day job as a security engineer.
+This is just a collection of things I created, learned, followed along with, or struggled with. Sometimes related to security, sometimes not. Mostly a place to put things to remember how I did them. Maybe one of these can help you.
