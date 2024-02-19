@@ -10,12 +10,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - name: Setup Ruby
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: '3.0'
+        ruby-version: '3.1'
     - name: Build and deploy
-      uses: helaili/jekyll-action@2.0.5
+      uses: actions/deploy-pages@v4
       env:
         JEKYLL_PAT: ${{ secrets.GITHUB_TOKEN }}
