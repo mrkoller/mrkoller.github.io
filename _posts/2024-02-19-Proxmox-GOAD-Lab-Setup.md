@@ -3,6 +3,7 @@ layout: post
 title: 'Promox GOAD (Game of Active Directory) Lab Setup'
 date: 2024-02-18
 tags: [security, proxmox]
+permalink: proxmox-goad-lab
 ---
 ## Intro
 Recently, I came across this article from  [@M4yFly](https://twitter.com/M4yFly) -  [Orange-Cyberdefense/GOAD: game of active directory](https://github.com/Orange-Cyberdefense/GOAD/tree/main). I’m always on the lookout for labs for Infosec practice and the installation options seemed great.
