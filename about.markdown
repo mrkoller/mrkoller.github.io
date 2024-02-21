@@ -8,4 +8,4 @@ This is just a collection of things I created, learned, followed along with, or 
 
 Please reach out if any of these helped you or you have an edit/suggestion.
 
-<img src="/assets/dog_in_snow.png">
+<img src="/assets/img/dog_in_snow.png">
