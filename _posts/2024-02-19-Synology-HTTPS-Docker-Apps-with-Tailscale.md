@@ -1,10 +1,10 @@
-```
+---
 layout: post
 title: 'Synology HTTPS Docker Apps with Tailscale'
 date: 2024-02-25
 tags: [tailscale, docker, synology]
 permalink: synology-tailscale-docker
-```
+---
 
 I’ve always wanted a way to run various docker apps with actual HTTPS certificates internally. Playing with DNS zones and reverse proxies can work well enough, but can be complex. If you are already using Tailscale and are a bit familiar with Docker, there is a way to cheat. 
 
