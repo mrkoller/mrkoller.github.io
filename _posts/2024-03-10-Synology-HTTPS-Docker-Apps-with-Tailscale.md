@@ -12366,6 +12366,7 @@ AALeEiBw9VZ9UhoEEEAAAQQQQMCzAgSunq1aCoYAAggggAACCHhLgMDVW/VJaRBA
 AAEEEEAAAc8KELh6tmopGAIIIIAAAggg4C0BAldv1SelQQABBBBAAAEEPCtA4OrZ
 qqVgCCCAAAIIIICAtwQIXL1Vn5QGAQQQQAABBBDwrACBq2erloIhgAACCCCAAALe
 EiBw9VZ9UhoEEEAAAQQQQMCzAv8PEb34A1SXFKQAAAAASUVORK5CYII=)<!-- {"width":497} -->
+
 For the Tailscale folder structure, I’m using the same naming method Alex used in his post with “ts-“ and the name of the other docker container folder for the app we’re setting up. 
 ![](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA9IAAAGYCAYAAACuz9r9AAACKWlUWHRYTUw6Y29t
 LmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBD
@@ -13167,6 +13168,7 @@ hXRpUiVQAgQIECBAgAABAgQIEMhBQCGdQxbEQIAAAQIECBAgQIAAAQKlEVBIlyZV
 AiVAgAABAgQIECBAgACBHAQU0jlkQQwECBAgQIAAAQIECBAgUBoBhXRpUiVQAgQI
 ECBAgAABAgQIEMhBQCGdQxbEQIAAAQIECBAgQIAAAQKlEfhfQ1CEBFHVwPAAAAAA
 SUVORK5CYII=)<!-- {"width":534} -->
+
 In the above “config” folder for tailscale, you’ll want to create a stirling-pdf.json file like below. This is what will help the HTTPS part work for us. 
 
 ~Note:~ When I tried using Alex’s example json from his post it had an `AllowFunnel: false` section which should turn off Tailscale Funnel service (expose the app to the internet), but that didn’t work for me in that it said funnel was on, so I just took out that section.
@@ -13228,7 +13230,7 @@ services:
 
 * There are two containers/services here: stirling-pdf and ts-stirling-pdf. The stirling-pdf container will depend on the ts-stirling-pdf container for its network (tailscale). You’ll notice that second container name is the same as the host name of the first container.
 * The `?ephemeral=false` part at the end of the OAuth client string will allow the device to persist on the tailnet.
-* That `- TS_SERVE_CONFIG=/config/stirling-pdf.json` is the file I mentioned above that we will edit once the container has tried to spin up once.
+* That `- TS_SERVE_CONFIG=/config/stirling-pdf.json` is the file I mentioned above.
 * The `- TS_EXTRA_ARGS=--advertise-tags=tag:container` line is the container tag that the OAuth client will use to authenticate.
 * There are other items that you might need explanations for, but those are either personal preferences (`restart: unless-stopped`), better described in Alex’s post, or easily found with a quick search.
 
@@ -14047,7 +14049,7 @@ ECBAgEB1CghUVOdzM2sCBAgQIECAAAECBAgQIECAAAECBAgQIECAAAECBAgQIECg
 jAJ15Rp7QcO8cg1tXAIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIBA
 WQVUqCgrr8EJECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgACBahT4/0Os
 mSZ9yKEQAAAAAElFTkSuQmCC)<!-- {"width":654} -->
-Now browse to https://stirling-pdf.<yourtailnetdomain>.ts.net and you should now have an HTTPS docker app running on your tailnet! Again, this might not be the best way to go about things, but it’s kinda magic if you ask me.
+Now browse to https://stirling-pdf.(yourtailnetdomain).ts.net and you should now have an HTTPS docker app running on your tailnet!
 
 As a bonus, here is another app called [n8n](https://n8n.io/) to demonstrate adding a third (database) container to the mix. This one was setup with an Auth key so that is another difference. This is an app that really needs a domain to run properly for some features, so it’s a good use case for the Tailscale HTTPS method. Credit [Marius](https://mariushosting.com/how-to-install-n8n-on-your-synology-nas/) for the basic layout of how to set this up.
 ```yml
