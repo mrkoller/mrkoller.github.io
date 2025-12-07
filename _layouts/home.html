@@ -11,34 +11,94 @@ layout: default
 
   {% if site.posts.size > 0 %}
     <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
+    
+    <!-- Tag Filter Bar -->
+    <div class="tag-filter-container">
+      <div class="tag-filter-label">Filter by tags:</div>
+      <div class="tag-filter-pills">
+        <button class="tag-pill active" data-tag="all">All</button>
+        {% assign all_tags = site.posts | map: 'tags' | join: ',' | split: ',' | uniq | sort %}
+        {% for tag in all_tags %}
+          {% unless tag == blank %}
+            <button class="tag-pill" data-tag="{{ tag | strip }}">{{ tag | strip }}</button>
+          {% endunless %}
+        {% endfor %}
+      </div>
+    </div>
+    
     <ul class="post-list">
       {% for post in site.posts %}
-      <li>
-        <div>
-          {%- if post.image -%}
-            <img src="{{- post.image | relative_url -}}" alt="" class="blog-roll-image">
-          {%- else -%}
-            {%- assign postImage = "/assets/img/image-default.jpg" -%}
-            <img src="{{- postImage | relative_url -}}" alt="" class="blog-roll-image">
-          {%- endif -%}
+      <li class="post-item" data-tags="{{ post.tags | join: ',' }}">
+        {%- if post.image -%}
+          <img src="{{- post.image | relative_url -}}" alt="{{ post.title | escape }}" class="blog-roll-image">
+        {%- else -%}
+          {%- assign postImage = "/assets/img/image-default.jpg" -%}
+          <img src="{{- postImage | relative_url -}}" alt="{{ post.title | escape }}" class="blog-roll-image">
+        {%- endif -%}
+        <div class="post-card-content">
           {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-          <span class="post-meta">{{ post.date | date: date_format }}</span>
-          <h3>
-            <a class="post-link" href="{{ post.url | relative_url }}">
-              {{ post.title | escape }}
-            </a>
-          </h3>
+          <div class="post-meta">{{ post.date | date: date_format }}</div>
+          <a class="post-link" href="{{ post.url | relative_url }}">
+            {{ post.title | escape }}
+          </a>
           {% if site.show_excerpts %}
-            {{ post.excerpt }}
+            <div class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 25 }}</div>
+          {% endif %}
+          {% if post.tags.size > 0 %}
+            <div class="post-tags">
+              {% for tag in post.tags %}
+                <span class="post-tag">{{ tag }}</span>
+              {% endfor %}
+            </div>
           {% endif %}
         </div>
-        {% if post.featured_image %}
-          <div class="featured-image">
-            <img src="{{ '/assets/' | append: post.featured_image | relative_url }}" />
-          </div>
-        {% endif %}
       </li>
       {% endfor %}
     </ul>
   {% endif %}
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const tagButtons = document.querySelectorAll('.tag-pill');
+  const postItems = document.querySelectorAll('.post-item');
+  
+  tagButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const selectedTag = this.dataset.tag;
+      
+      // Update active button
+      tagButtons.forEach(btn => btn.classList.remove('active'));
+      this.classList.add('active');
+      
+      // Filter posts with smooth animation
+      postItems.forEach(post => {
+        const postTags = post.dataset.tags.split(',');
+        const shouldShow = selectedTag === 'all' || postTags.includes(selectedTag);
+        
+        if (shouldShow) {
+          post.style.display = 'block';
+          post.style.opacity = '0';
+          post.style.transform = 'translateY(20px)';
+          
+          // Animate in
+          setTimeout(() => {
+            post.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+            post.style.opacity = '1';
+            post.style.transform = 'translateY(0)';
+          }, 50);
+        } else {
+          post.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+          post.style.opacity = '0';
+          post.style.transform = 'translateY(-20px)';
+          
+          // Hide after animation
+          setTimeout(() => {
+            post.style.display = 'none';
+          }, 300);
+        }
+      });
+    });
+  });
+});
+</script>
