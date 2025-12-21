@@ -17,31 +17,50 @@
         --bg-color: #1a1a1a;
         --text-color: #e5e5e5;
         --link-color: #60a5fa;
-        --border-color: #374151;
+        --border-color: #4b5563;
         --accent-color: #f97316;
       }
     }
-    
-    body { 
+
+    body {
       background-color: var(--bg-color);
       color: var(--text-color);
     }
     a {
       color: var(--link-color);
     }
-    
+
     .site-title {
       color: var(--accent-color) !important;
     }
-    
+
     .site-title:visited {
       color: var(--accent-color) !important;
     }
-    
-    code, pre {
+
+    code {
       background-color: var(--bg-color) !important;
       color: var(--text-color) !important;
       border: 1px solid var(--border-color) !important;
+    }
+
+    pre {
+      background-color: var(--bg-color) !important;
+      color: var(--text-color) !important;
+    }
+
+    /* Apply border to code block wrappers */
+    .highlighter-rouge {
+      border: 1px solid var(--border-color) !important;
+      border-radius: 3px !important;
+    }
+
+    /* Remove borders from nested elements */
+    pre > code,
+    .highlight,
+    .highlighter-rouge .highlight,
+    .highlighter-rouge pre {
+      border: 0 !important;
     }
   </style>
 
