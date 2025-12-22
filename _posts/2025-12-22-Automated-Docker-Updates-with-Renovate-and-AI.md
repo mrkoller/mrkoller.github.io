@@ -452,27 +452,6 @@ Monitor for 1-2 weeks after tuning.
 3. **Filter before analysis:**
    Skip documentation-only updates, digest pins
 
-## Benefits After 6 Months
-
-**Time savings:**
-- Before: 2-4 hours/week manual checking
-- After: 15 minutes/week reviewing flagged updates
-- Savings: ~10 hours/month
-
-**Reliability:**
-- Zero missed security patches
-- Consistent update cadence
-- No forgotten services
-
-**Peace of mind:**
-- AI catches breaking changes I might miss
-- Discord notifications keep me informed
-- GitOps deployment is hands-off
-
-**False positives/negatives:**
-- ~5% of APPROVED should have been NEEDS_REVIEW
-- ~2% of REJECTED were actually safe
-- Both are acceptable for the time saved
 
 ## Limitations
 
