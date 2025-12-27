@@ -420,6 +420,10 @@ This stack has been running for over a year with 40+ services. The patterns work
 
 If you're building a homelab and want solid patterns without Kubernetes complexity, this stack is worth considering.
 
+
+---
+
+AI Influence Level: [AIL2](https://danielmiessler.com/blog/ai-influence-level-ail)
 ---
 
 **Resources:**

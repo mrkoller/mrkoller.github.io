@@ -504,6 +504,10 @@ The key insight: Most updates are safe and don't need human review. AI can asses
 
 If you're managing a homelab with dozens of services, this approach scales much better than manual updates.
 
+
+---
+
+AI Influence Level: [AIL2](https://danielmiessler.com/blog/ai-influence-level-ail)
 ---
 
 **Resources:**

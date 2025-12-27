@@ -248,3 +248,6 @@ New-MgBetaGroupAppRoleAssignment -GroupId $groupObjectId -PrincipalId $groupObje
 ```
 
 Check the portal and you should now have your app proxy fully configured!
+---
+
+AI Influence Level: [AIL0](https://danielmiessler.com/blog/ai-influence-level-ail) (no AI involvement)

@@ -14126,3 +14126,7 @@ services:
       db:
         condition: service_healthy
 ```
+
+---
+
+AI Influence Level: [AIL0](https://danielmiessler.com/blog/ai-influence-level-ail) (no AI involvement)

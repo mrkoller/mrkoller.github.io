@@ -11,7 +11,9 @@ I liked the idea of ErsatzTV and had tested it out via Jellyfin. Worked well, bu
 
 Our family watches Live TV through Plex currently via HDHomerun. Plex is running from a docker container on a mini PC running Ubuntu, along with the ErstazTV container. But, Plex Live TV has a frustrating limitation: you can only configure **one** Live TV guide source at a time. I already had an HDHomerun pulling in over-the-air channels, but wanted to add custom channels from ErsatzTV.
 
-![Regular Plex Live TV Settings](/assets/img/regular-live-tv.png)
+<a href="/assets/img/regular-live-tv.png" target="_blank">
+  <img src="/assets/img/regular-live-tv.png" alt="Regular Plex Live TV Settings" style="max-width: 100%; cursor: pointer;">
+</a>
   
 One workaround is to run two separate Plex containers on the same server with different port mappings. It's not elegant, but it works until Plex adds support for multiple Live TV sources.  
   
@@ -20,7 +22,9 @@ One workaround is to run two separate Plex containers on the same server with di
   
 Both containers run on the same Ubuntu pc, just with different port mappings so they don't conflict. You can switch between them in any Plex client by adding both servers to your account.
 
-![ErsatzTV Custom Channels](/assets/img/Ersatz.png)  
+<a href="/assets/img/Ersatz.png" target="_blank">
+  <img src="/assets/img/Ersatz.png" alt="ErsatzTV Custom Channels" style="max-width: 100%; cursor: pointer;">
+</a>
 
 ## Prerequisites  
   
@@ -213,6 +217,10 @@ By running two completely separate Plex servers (with different config directori
   
 Both servers authenticate with the same Plex account, so all your clients see both servers and you can switch between them freely.  
 ⸻  
+
+---
+
+AI Influence Level: [AIL2](https://danielmiessler.com/blog/ai-influence-level-ail)
 **Resources:**  
 - [ErsatzTV Documentation](https://ersatztv.org)  
 - [Plex Docker Image](https://hub.docker.com/r/plexinc/pms-docker)  

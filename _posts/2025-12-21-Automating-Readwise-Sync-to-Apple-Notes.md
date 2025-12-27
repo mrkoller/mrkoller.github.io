@@ -350,3 +350,7 @@ Here's what a backed-up article looks like in Apple Notes:
 [Full article content with formatting]
 
 #productivity #automation #readwise
+
+---
+
+AI Influence Level: [AIL2](https://danielmiessler.com/blog/ai-influence-level-ail)

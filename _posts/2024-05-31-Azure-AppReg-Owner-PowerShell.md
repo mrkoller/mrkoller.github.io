@@ -110,4 +110,7 @@ foreach ($user in $users) {
 }
 Disconnect-MgGraph
 ```
- 
+
+---
+
+AI Influence Level: [AIL0](https://danielmiessler.com/blog/ai-influence-level-ail) (no AI involvement)

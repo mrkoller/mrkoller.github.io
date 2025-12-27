@@ -771,6 +771,10 @@ sudo cp /mnt/docker-data/ente/config/credentials.yaml \
        /mnt/docker-data/ente/config/credentials.yaml.backup-$(date +%Y%m%d-%H%M%S)
 ```
 
+
+---
+
+AI Influence Level: [AIL2](https://danielmiessler.com/blog/ai-influence-level-ail)
 ---
 
 **Resources:**
