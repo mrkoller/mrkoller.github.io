@@ -637,7 +637,7 @@ docker exec ente-tailscale ping -c 3 another-device.your-tailnet.ts.net
 
 **Configuration:**
 
-Open the app and click somewhere oon the login page 8 times:
+Open the app and click somewhere on the login page 8 times:
 - Custom server endpoint: `https://ente.your-tailnet.ts.net/api`
 - Log in with account created above
 
